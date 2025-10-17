@@ -21,7 +21,7 @@ src/main
 ├── pages
 │   ├── AirbnbPage.java             // Page class for Airbnb web
 │   └── CultFitPage.java            // Page class for CultFit mobile
-││
+│
 └── utils
     ├── RetryAnalyzer.java          // Retry failed tests
     └── PropertiesReader.java      // Method to properties file
