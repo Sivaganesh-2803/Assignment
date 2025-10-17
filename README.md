@@ -1,46 +1,46 @@
-# Assignment
-Automation Framework README
-Overview
+# Automation Framework Overview
 
-This is a  automation framework which supports:
+This is an **automation framework** that supports both **Web** and **Mobile** automation testing.
 
-Web Automation: Airbnb web application (Chrome, Firefox, Edge).
+---
 
-Mobile Automation: CultFit mobile app on Android using LambdaTest.
+## Supported Platforms
 
-Test Management: TestNG for running tests and RetryAnalyzer for retrying failed tests.
+### Web Automation
+- Airbnb web application
+- Supported browsers: **Chrome, Firefox, Edge**
 
-Reporting: ExtentReports for detailed HTML reports.
+### Mobile Automation
+- CultFit mobile app on **Android**
+- Runs on **LambdaTest** cloud
 
-Project Structure
-src/main
-│
-├── base
-│   └── BaseTest.java               // Driver setup for web , mobile either locally or lambda test and extent report
-│
-├── pages
-│   ├── AirbnbPage.java             // Page class for Airbnb web
-│   └── CultFitPage.java            // Page class for CultFit mobile
-│
-└── utils
-    ├── RetryAnalyzer.java          // Retry failed tests
-    └── PropertiesReader.java      // Method to properties file
+---
 
-src/test
-│
-├── tests
-│   └── Testclass.java               // Calls the methods from Page classes  
+## Test Management
+- **TestNG**: For running tests
+- **RetryAnalyzer**: Automatically retries failed tests (up to 2 times)
 
+---
 
+## Reporting
+- **ExtentReports**: Generates detailed HTML reports with:
+  - Pass/Fail logs
+  - Step-by-step execution details
 
-Features
+---
 
-RetryAnalyzer: Automatically retries failed tests up to 2 times.
+## Project Structure
 
-ExtentReports: Generates detailed HTML reports with:
-
-Pass/Fail logs
-
-Cross-browser support: Chrome, Firefox, Edge
-
-Mobile Support: Android apps on LambdaTest cloud
+src/
+├── main/
+│ ├── base/
+│ │ └── BaseTest.java // Driver setup for web & mobile, either locally or on LambdaTest, and ExtentReports initialization
+│ ├── pages/
+│ │ ├── AirbnbPage.java // Page class for Airbnb web
+│ │ └── CultFitPage.java // Page class for CultFit mobile
+│ └── utils/
+│ ├── RetryAnalyzer.java // Retries failed tests
+│ └── PropertiesReader.java // Reads properties file
+└── test/
+└── tests/
+└── TestClass.java // Calls methods from Page classes
